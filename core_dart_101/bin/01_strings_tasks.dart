@@ -20,3 +20,6 @@ concatenateStrings(srt1, srt2) {
   // throw Exception('Some arbitrary error');
   return srt1 + '' + srt2;
 }
+
+
+// ignore_for_file: file_names
