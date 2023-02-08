@@ -17,4 +17,4 @@ Streams
 Conditions and Loops
 Functions and Closures
 
-## Active usage of documentation is strongly recommended!
+## Active usage of [documentation](https://dart.dev/guides) is strongly recommended!
