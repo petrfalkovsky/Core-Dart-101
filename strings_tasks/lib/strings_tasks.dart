@@ -1,9 +1,9 @@
-/* *******************************************************************************************
- *                                                                                           *
- * Please read the following tutorial before implementing tasks:                              *
- * https://dart.dev/guides/libraries/library-tour#dartcore---numbers-collections-strings-and-moreg   *
- *                                                                                           *
- ******************************************************************************************* */
+/* *************************************************************************************************
+ *                                                                                                 *
+ * Please read the following tutorial before implementing tasks:                                   *
+ * https://dart.dev/guides/libraries/library-tour#dartcore---numbers-collections-strings-and-moreg *
+ *                                                                                                 *
+ ***************************************************************************************************/
 
 /// Returns the result of concatenation of two strings.
 ///
@@ -21,10 +21,10 @@
 // todo: look how I did it step by step:
 
 // step 0.
-// concatenateStrings(str1, str2) {
-//   throw UnimplementedError('Try to solve the task');
-//   // your code here
-// }
+concatenateStrings(str1, str2) {
+  throw UnimplementedError('Try to solve the task');
+  // your code here
+}
 
 // step 1.
 // ! in process of resolving and must be checked with "dart run" command
@@ -41,8 +41,8 @@
 
 // step 4. I tested my solution with the dart test command:
 // ? resolved and checked by "dart test" command
-concatenateStrings(str1, str2) {
-  return '$str1$str2';
-}
+// concatenateStrings(str1, str2) {
+//   return '$str1$str2';
+// }
 
 // todo: So now it's your turn, go ahead!

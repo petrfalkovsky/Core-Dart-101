@@ -18,3 +18,6 @@ Conditions and Loops
 Functions and Closures
 
 # Active usage of documentation is strongly recommended!
+
+
+# TODO: go to the tasks folder: ~/Core-Dart-101/string_tatsks$ cd string_tatsks solve them, and then go to the tasks number_tasks and proceed in a similar way
