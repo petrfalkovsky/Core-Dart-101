@@ -1,8 +1,9 @@
+import 'package:core_dart_101/strings_tasks.dart';
 import 'package:test/test.dart';
-import '../bin/01_strings_tasks.dart';
 
 void main() {
-  test('concatenateStrings should return concatenation of two strings', () {
+  test('ConcatenateStrings should return concatenation of two strings', () {
+    expect(concatenateStrings('', ''), equals(''));
     expect(concatenateStrings('aa', 'bb'), 'aabb');
     expect(concatenateStrings('aa', ''), 'aa');
     expect(concatenateStrings('', 'bb'), 'bb');
