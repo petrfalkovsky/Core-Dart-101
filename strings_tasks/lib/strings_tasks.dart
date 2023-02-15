@@ -22,8 +22,8 @@
 
 // step 0.
 concatenateStrings(str1, str2) {
-  throw UnimplementedError('Try to solve the task');
   // your code here
+  return '$str1$str2';
 }
 
 // step 1.
@@ -46,3 +46,18 @@ concatenateStrings(str1, str2) {
 // }
 
 // todo: So now it's your turn, go ahead!
+/// Returns the length of given string.
+///
+/// @param {string} value
+/// @return {number}
+///
+/// @example
+///   'aaaaa' => 5
+///   'b'     => 1
+///   ''      => 0
+getStringLength(str) {
+  // your code here
+  // const str = 'Some text not so long.';
+  // const str = 'aaaaa';
+  // return str.length;
+}
