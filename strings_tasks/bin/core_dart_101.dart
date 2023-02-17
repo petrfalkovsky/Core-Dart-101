@@ -11,6 +11,9 @@ void main(List<String> arguments) {
 
   final concatenateStrings = core_dart_101.concatenateStrings('', '');
   final getStringLength = core_dart_101.getStringLength('');
+  final getStringFromTemplate = core_dart_101.getStringFromTemplate('', '');
+  final extractNameFromTemplate = core_dart_101.extractNameFromTemplate('');
+  final getFirstChar = core_dart_101.getFirstChar('');
 
   if (concatenateStrings != null) {
     print(
@@ -18,10 +21,32 @@ void main(List<String> arguments) {
   } else {
     print('$colorFgRed $result $concatenateStrings$tryMore');
   }
+
   if (getStringLength != null) {
     print(
         '$colorFgYellow $result $getStringLength $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
     print('$colorFgRed $result $getStringLength$tryMore');
+  }
+
+  if (getStringFromTemplate != null) {
+    print(
+        '$colorFgYellow $result $getStringFromTemplate $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $getStringFromTemplate$tryMore');
+  }
+
+  if (extractNameFromTemplate != null) {
+    print(
+        '$colorFgYellow $result $extractNameFromTemplate $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $extractNameFromTemplate$tryMore');
+  }
+
+  if (getFirstChar != null) {
+    print(
+        '$colorFgYellow $result $getFirstChar $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $getFirstChar$tryMore');
   }
 }
