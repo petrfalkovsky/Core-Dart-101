@@ -59,5 +59,64 @@ getStringLength(str) {
   // your code here
   // const str = 'Some text not so long.';
   // const str = 'aaaaa';
-  // return str.length;
+
+  return str.length;
+}
+
+/// Returns the result of string template and given parameters firstName and lastName.
+///
+/// @param {string} firstName
+/// @param {string} lastName
+/// @return {string}
+///
+/// @example
+///   'John','Doe'      => 'Hello, John Doe!'
+///   'Chuck','Norris'  => 'Hello, Chuck Norris!'
+getStringFromTemplate(String firstName, String lastName) {
+  // your code here
+  // const firstName = "Петя";
+  // const lastName = "Терентьев";
+
+  return 'Hello, $firstName $lastName!';
+}
+
+/// Extracts a name from template string 'Hello, First_Name Last_Name!'.
+///
+/// @param {string} value
+/// @return {string}
+///
+/// @example
+///   'Hello, John Doe!' => 'John Doe'
+///   'Hello, Chuck Norris!' => 'Chuck Norris'
+extractNameFromTemplate(String value) {
+  // return value.split(' ')[1].replaceAll('!', '');
+
+  // List<String> words = value.split(' ');
+  // if (words.length >= 2) {
+  //   return words[1].replaceAll('!', '');
+  // } else {
+  //   return '';
+  // }
+
+  // не проходит тест
+  // final string = value.split('Hello, ')[1];
+  // return string.replaceFirst(RegExp(r', [^,]*$'), '');
+
+  // todo работает это вариант
+  // const value = 'Hello, John Doe!';
+  // final string = value.split('Hello, ')[1];
+  // return string.substring(0, string.length - 1);
+}
+
+/// Returns a first char of the given string.
+///
+/// @param {string} value
+/// @return {string}
+///
+/// @example
+///   'John Doe'  => 'J'
+///   'cat'       => 'c'
+getFirstChar(String value) {
+  // const value = 'aksjdhfa;kshf';
+  return value[0];
 }
