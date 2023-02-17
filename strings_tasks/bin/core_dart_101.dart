@@ -12,8 +12,9 @@ void main(List<String> arguments) {
   final concatenateStrings = core_dart_101.concatenateStrings('', '');
   final getStringLength = core_dart_101.getStringLength('');
   final getStringFromTemplate = core_dart_101.getStringFromTemplate('', '');
-  final extractNameFromTemplate = core_dart_101.extractNameFromTemplate('');
-  final getFirstChar = core_dart_101.getFirstChar('');
+  final extractNameFromTemplate =
+      core_dart_101.extractNameFromTemplate('Hello, John Doe!');
+  final getFirstChar = core_dart_101.getFirstChar('Hello, John Doe!');
 
   if (concatenateStrings != null) {
     print(

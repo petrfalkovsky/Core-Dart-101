@@ -37,6 +37,6 @@ void main() {
       () {
     expect(getFirstChar('Hello, John Doe!'), 'H');
     expect(getFirstChar('chuck Norris!'), 'c');
-    // expect(getFirstChar('йух енйов!'), 'й');
+    expect(getFirstChar('йух енйов!'), 'й');
   });
 }

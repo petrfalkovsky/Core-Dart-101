@@ -76,7 +76,6 @@ getStringFromTemplate(String firstName, String lastName) {
   // your code here
   // const firstName = "Петя";
   // const lastName = "Терентьев";
-
   return 'Hello, $firstName $lastName!';
 }
 
@@ -88,24 +87,9 @@ getStringFromTemplate(String firstName, String lastName) {
 /// @example
 ///   'Hello, John Doe!' => 'John Doe'
 ///   'Hello, Chuck Norris!' => 'Chuck Norris'
-extractNameFromTemplate(String value) {
-  // return value.split(' ')[1].replaceAll('!', '');
-
-  // List<String> words = value.split(' ');
-  // if (words.length >= 2) {
-  //   return words[1].replaceAll('!', '');
-  // } else {
-  //   return '';
-  // }
-
-  // не проходит тест
-  // final string = value.split('Hello, ')[1];
-  // return string.replaceFirst(RegExp(r', [^,]*$'), '');
-
-  // todo работает это вариант
-  // const value = 'Hello, John Doe!';
-  // final string = value.split('Hello, ')[1];
-  // return string.substring(0, string.length - 1);
+String? extractNameFromTemplate(String value) {
+  final string = value.split('Hello, ')[1];
+  return string.substring(0, string.length - 1);
 }
 
 /// Returns a first char of the given string.
@@ -116,7 +100,9 @@ extractNameFromTemplate(String value) {
 /// @example
 ///   'John Doe'  => 'J'
 ///   'cat'       => 'c'
-getFirstChar(String value) {
-  // const value = 'aksjdhfa;kshf';
-  return value[0];
+String? getFirstChar(String value) {
+  if (value.isNotEmpty) {
+    return value[0];
+  }
+  return null;
 }
