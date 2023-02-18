@@ -6,7 +6,7 @@ void main(List<String> arguments) {
   const colorFgWhite = '\x1b[37m';
 
   const maybeRight = 'looks nice, try check it';
-  const result = 'Result for concatenateStrings task:';
+  const result = 'Result for';
   const tryMore = ', try add you code maybe';
 
   final concatenateStrings = core_dart_101.concatenateStrings('', '');
@@ -15,39 +15,81 @@ void main(List<String> arguments) {
   final extractNameFromTemplate =
       core_dart_101.extractNameFromTemplate('Hello, John Doe!');
   final getFirstChar = core_dart_101.getFirstChar('Hello, John Doe!');
+  final removeLeadingAndTrailingWhitespaces =
+      core_dart_101.removeLeadingAndTrailingWhitespaces('');
+  final removeFirstOccurrences = core_dart_101.removeFirstOccurrences('', '');
+  final unbracketTag = core_dart_101.unbracketTag('');
+  final convertToUpperCase = core_dart_101.convertToUpperCase('');
+  final extractEmails = core_dart_101.extractEmails('');
 
   if (concatenateStrings != null) {
     print(
-        '$colorFgYellow $result $concatenateStrings $maybeRight $colorFgWhite dart test $colorFgYellow command');
+        '$colorFgYellow $result concatenateStrings task: «$concatenateStrings» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
     print('$colorFgRed $result $concatenateStrings$tryMore');
   }
 
   if (getStringLength != null) {
     print(
-        '$colorFgYellow $result $getStringLength $maybeRight $colorFgWhite dart test $colorFgYellow command');
+        '$colorFgYellow $result getStringLength task: «$getStringLength» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
     print('$colorFgRed $result $getStringLength$tryMore');
   }
 
   if (getStringFromTemplate != null) {
     print(
-        '$colorFgYellow $result $getStringFromTemplate $maybeRight $colorFgWhite dart test $colorFgYellow command');
+        '$colorFgYellow $result getStringFromTemplate task: «$getStringFromTemplate» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
     print('$colorFgRed $result $getStringFromTemplate$tryMore');
   }
 
   if (extractNameFromTemplate != null) {
     print(
-        '$colorFgYellow $result $extractNameFromTemplate $maybeRight $colorFgWhite dart test $colorFgYellow command');
+        '$colorFgYellow $result extractNameFromTemplate task: «$extractNameFromTemplate» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
     print('$colorFgRed $result $extractNameFromTemplate$tryMore');
   }
 
   if (getFirstChar != null) {
     print(
-        '$colorFgYellow $result $getFirstChar $maybeRight $colorFgWhite dart test $colorFgYellow command');
+        '$colorFgYellow $result getFirstChar task: «$getFirstChar» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
     print('$colorFgRed $result $getFirstChar$tryMore');
   }
+
+  if (removeLeadingAndTrailingWhitespaces != null) {
+    print(
+        '$colorFgYellow $result removeLeadingAndTrailingWhitespaces task: «$removeLeadingAndTrailingWhitespaces» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $removeLeadingAndTrailingWhitespaces$tryMore');
+  }
+
+  if (removeFirstOccurrences != null) {
+    print(
+        '$colorFgYellow $result removeFirstOccurrences task: «$removeFirstOccurrences» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $removeFirstOccurrences$tryMore');
+  }
+
+  if (unbracketTag != null) {
+    print(
+        '$colorFgYellow $result unbracketTag task: «$unbracketTag» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $unbracketTag$tryMore');
+  }
+
+  if (convertToUpperCase != null) {
+    print(
+        '$colorFgYellow $result convertToUpperCase task: «$convertToUpperCase» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $convertToUpperCase$tryMore');
+  }
+
+  if (extractEmails != null) {
+    print(
+        '$colorFgYellow $result extractEmails task: «$extractEmails» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $extractEmails$tryMore');
+  }
 }
+// «»  extractEmails
