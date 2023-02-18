@@ -76,7 +76,6 @@ getStringFromTemplate(String firstName, String lastName) {
   // your code here
   // const firstName = "Петя";
   // const lastName = "Терентьев";
-
   return 'Hello, $firstName $lastName!';
 }
 
@@ -88,24 +87,9 @@ getStringFromTemplate(String firstName, String lastName) {
 /// @example
 ///   'Hello, John Doe!' => 'John Doe'
 ///   'Hello, Chuck Norris!' => 'Chuck Norris'
-extractNameFromTemplate(String value) {
-  // return value.split(' ')[1].replaceAll('!', '');
-
-  // List<String> words = value.split(' ');
-  // if (words.length >= 2) {
-  //   return words[1].replaceAll('!', '');
-  // } else {
-  //   return '';
-  // }
-
-  // не проходит тест
-  // final string = value.split('Hello, ')[1];
-  // return string.replaceFirst(RegExp(r', [^,]*$'), '');
-
-  // todo работает это вариант
-  // const value = 'Hello, John Doe!';
-  // final string = value.split('Hello, ')[1];
-  // return string.substring(0, string.length - 1);
+String? extractNameFromTemplate(String value) {
+  final string = value.split('Hello, ')[1];
+  return string.substring(0, string.length - 1);
 }
 
 /// Returns a first char of the given string.
@@ -116,7 +100,103 @@ extractNameFromTemplate(String value) {
 /// @example
 ///   'John Doe'  => 'J'
 ///   'cat'       => 'c'
-getFirstChar(String value) {
-  // const value = 'aksjdhfa;kshf';
-  return value[0];
+String? getFirstChar(String value) {
+  if (value.isNotEmpty) {
+    return value[0];
+  }
+  return null;
+}
+
+/// Removes a leading and trailing whitespace characters from string.
+///
+/// @param {string} value
+/// @return {string}
+///
+/// @example
+///   '  Abracadabra'    => 'Abracadabra'
+///   'cat'              => 'cat'
+///   '\tHello, World! ' => 'Hello, World!'
+String? removeLeadingAndTrailingWhitespaces(String value) {
+  // const value = '  Abracadabra';
+  return value.trim();
+}
+
+/// Returns a string that repeated the specified number of times.
+///
+/// @param {string} value
+/// @param {string} count
+/// @return {string}
+///
+/// @example
+///   'A', 5  => 'AAAAA'
+///   'cat', 3 => 'catcatcat'
+// первое решение
+// String? repeatString(dynamic value, int count) {
+//   return value.repeat(count);
+// }
+// второе решение
+// String? repeatString(String value, int count) {
+//   return List.filled(count, value).join();
+// }
+
+/// Remove the first occurrence of string inside another string
+///
+/// @param {string} str
+/// @param {string} value
+/// @return {string}
+///
+/// @example
+///   'To be or not to be', ' not'  => 'To be or to be'
+///   'I like legends', 'end' => 'I like legs',
+///   'ABABAB','BA' => 'ABAB'
+String? removeFirstOccurrences(String str, String value) {
+  // const str = 'I like legends';
+  // const value = 'end';
+  return str.replaceFirst(value, '');
+}
+
+/// Remove the first and last angle brackets from tag string
+///
+/// @param {string} str
+/// @return {string}
+///
+/// @example
+///   '<div>' => 'div'
+///   '<span>' => 'span'
+///   '<a>' => 'a'
+String? unbracketTag(String str) {
+  // const str = '<span>';
+  return str.replaceAll('<', '').replaceAll('>', '');
+}
+
+/// Converts all characters of the specified string into the upper case
+///
+/// @param {string} str
+/// @return {string}
+///
+/// @example
+///   'Thunderstruck' => 'THUNDERSTRUCK'
+///  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+String? convertToUpperCase(str) {
+  // const str = '15df4g5sfgv1z56sgf4ds8ha623469&^#@';
+  return str.toUpperCase();
+}
+
+/// Extracts e-mails from single string with e-mails list delimeted by semicolons
+///
+/// @param {string} str
+/// @return {array}
+///
+/// @example
+///   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'
+///   => [
+///      'angus.young@gmail.com',
+///      'brian.johnson@hotmail.com',
+///      'bon.scott@yahoo.com'
+///   ],
+///   'info@gmail.com' => ['info@gmail.com']
+List<String>? extractEmails(str) {
+  // const str =
+  //     'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com';
+  return str.split(';');
 }
