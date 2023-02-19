@@ -200,3 +200,30 @@ List<String>? extractEmails(str) {
   //     'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com';
   return str.split(';');
 }
+
+// String? drawRectangle(int width, int height) {
+//   // Choose the pseudographic characters for the rectangle's borders and fill
+//   final borderChar = '-';
+//   final fillChar = ' ';
+
+//   // Initialize the rectangle string with the top border
+//   var rectangle = '${borderChar * width}\n';
+
+//   // Add the sides of the rectangle
+//   for (var i = 0; i < height - 2; i++) {
+//     rectangle += '$borderChar${fillChar * (width - 2)}$borderChar\n';
+//   }
+
+//   // Add the bottom border of the rectangle
+//   rectangle += borderChar * width;
+
+//   return rectangle;
+// }
+
+String? drawRectangle(int width, int height) {
+  final horizontal = '─' * (width - 2);
+  final top = '┌$horizontal┐\n';
+  final middle = '│${' ' * (width - 2)}│\n' * (height - 2);
+  final bottom = '└$horizontal┘\n';
+  return top + middle + bottom;
+}

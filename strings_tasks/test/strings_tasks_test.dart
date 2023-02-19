@@ -89,4 +89,20 @@ void main() {
       ],
     );
   });
+  test(
+      '\r\x1B[33m getRectangleString should return the string reprentation of rectangle with specified size \x1B[33m',
+      () {
+    expect(
+      drawRectangle(6, 4),
+      '┌────┐\n│    │\n│    │\n└────┘\n',
+    );
+    expect(
+      drawRectangle(2, 2),
+      '┌┐\n' '└┘\n',
+    );
+    expect(
+      drawRectangle(12, 3),
+      '┌──────────┐\n│          │\n└──────────┘\n',
+    );
+  });
 }

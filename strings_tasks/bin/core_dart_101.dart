@@ -21,6 +21,7 @@ void main(List<String> arguments) {
   final unbracketTag = core_dart_101.unbracketTag('');
   final convertToUpperCase = core_dart_101.convertToUpperCase('');
   final extractEmails = core_dart_101.extractEmails('');
+  final drawRectangle = core_dart_101.drawRectangle(6, 4);
 
   if (concatenateStrings != null) {
     print(
@@ -91,5 +92,12 @@ void main(List<String> arguments) {
   } else {
     print('$colorFgRed $result $extractEmails$tryMore');
   }
+
+  if (drawRectangle != null) {
+    print(
+        '$colorFgYellow $result drawRectangle task: \n$drawRectangle $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $drawRectangle$tryMore');
+  }
 }
-// «»  extractEmails
+// «»  getRectangleString should return the string reprentation of rectangle with specified size
