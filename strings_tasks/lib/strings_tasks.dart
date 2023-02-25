@@ -201,25 +201,27 @@ List<String>? extractEmails(str) {
   return str.split(';');
 }
 
-// String? drawRectangle(int width, int height) {
-//   // Choose the pseudographic characters for the rectangle's borders and fill
-//   final borderChar = '-';
-//   final fillChar = ' ';
-
-//   // Initialize the rectangle string with the top border
-//   var rectangle = '${borderChar * width}\n';
-
-//   // Add the sides of the rectangle
-//   for (var i = 0; i < height - 2; i++) {
-//     rectangle += '$borderChar${fillChar * (width - 2)}$borderChar\n';
-//   }
-
-//   // Add the bottom border of the rectangle
-//   rectangle += borderChar * width;
-
-//   return rectangle;
-// }
-
+/// Returns the string representation of rectangle with specified width and height
+/// using pseudograhic chars
+///
+/// @param {number} width
+/// @param {number} height
+/// @return {string}
+///
+/// @example
+///
+///            '┌────┐\n'+
+///  (6,4) =>  '│    │\n'+
+///            '│    │\n'+
+///            '└────┘\n'
+///
+///  (2,2) =>  '┌┐\n'+
+///            '└┘\n'
+///
+///             '┌──────────┐\n'+
+///  (12,3) =>  '│          │\n'+
+///             '└──────────┘\n'
+///
 String? drawRectangle(int width, int height) {
   final horizontal = '─' * (width - 2);
   final top = '┌$horizontal┐\n';
@@ -227,3 +229,211 @@ String? drawRectangle(int width, int height) {
   final bottom = '└$horizontal┘\n';
   return top + middle + bottom;
 }
+
+/// Encode specified string with ROT13 cipher
+/// See details:  https://en.wikipedia.org/wiki/ROT13
+///
+/// @param {string} str
+/// @return {string}
+///
+/// @example
+///
+///   'hello' => 'uryyb'
+///   'Why did the chicken cross the road?' => 'Jul qvq gur puvpxra pebff gur ebnq?'
+///   'Gb trg gb gur bgure fvqr!' => 'To get to the other side!'
+///   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+///    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+// All tests passed!
+// String? encodeToRot13(String input) {
+//   StringBuffer output = StringBuffer();
+//   for (int i = 0; i < input.length; i++) {
+//     int charCode = input.codeUnitAt(i);
+//     if (charCode >= 65 && charCode <= 90) {
+//       // uppercase letters
+//       charCode = ((charCode - 65 + 13) % 26) + 65;
+//     } else if (charCode >= 97 && charCode <= 122) {
+//       // lowercase letters
+//       charCode = ((charCode - 97 + 13) % 26) + 97;
+//     }
+//     output.writeCharCode(charCode);
+//   }
+//   return output.toString();
+// }
+// All tests passed!
+String? encodeToRot13(String input) {
+  // const input = 'hello';
+  List<int> inputRunes = input.runes.toList();
+  List<int> outputRunes = inputRunes.map((int charCode) {
+    if (charCode >= 65 && charCode <= 90) {
+      // uppercase letters
+      return ((charCode - 65 + 13) % 26) + 65;
+    } else if (charCode >= 97 && charCode <= 122) {
+      // lowercase letters
+      return ((charCode - 97 + 13) % 26) + 97;
+    } else {
+      return charCode;
+    }
+  }).toList();
+  return String.fromCharCodes(outputRunes);
+}
+
+/// Returns true if the value is string; otherwise false.
+/// @param {string} value
+/// @return {boolean}
+///
+/// @example
+///   isString() => false
+///   isString(null) => false
+///   isString([]) => false
+///   isString({}) => false
+///   isString('test') => true
+///   isString(new String('test')) => true
+bool? isString(dynamic value) {
+  return value is String;
+}
+
+/// Returns playid card id.
+///
+/// Playing cards inittial deck inclides the cards in the following order:
+///
+///  'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
+///  'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
+///  'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
+///  'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'
+///
+/// (see https://en.wikipedia.org/wiki/Standard_52-card_deck)
+/// Function returns the zero-based index of specified card in the initial deck above.
+///
+/// @param {string} value
+/// @return {number}
+///
+/// @example
+///   'A♣' => 0
+///   '2♣' => 1
+///   '3♣' => 2
+///     ...
+///   'Q♠' => 50
+///   'K♠' => 51
+
+int? getCardId(String x) {
+  // const playid = 'K♠';
+  final cards = [
+    'A♣',
+    '2♣',
+    '3♣',
+    '4♣',
+    '5♣',
+    '6♣',
+    '7♣',
+    '8♣',
+    '9♣',
+    '10♣',
+    'J♣',
+    'Q♣',
+    'K♣',
+    'A♦',
+    '2♦',
+    '3♦',
+    '4♦',
+    '5♦',
+    '6♦',
+    '7♦',
+    '8♦',
+    '9♦',
+    '10♦',
+    'J♦',
+    'Q♦',
+    'K♦',
+    'A♥',
+    '2♥',
+    '3♥',
+    '4♥',
+    '5♥',
+    '6♥',
+    '7♥',
+    '8♥',
+    '9♥',
+    '10♥',
+    'J♥',
+    'Q♥',
+    'K♥',
+    'A♠',
+    '2♠',
+    '3♠',
+    '4♠',
+    '5♠',
+    '6♠',
+    '7♠',
+    '8♠',
+    '9♠',
+    '10♠',
+    'J♠',
+    'Q♠',
+    'K♠',
+  ];
+
+  final cardIndex = cards.indexOf(x);
+  return cardIndex != -1 ? cardIndex : null;
+}
+
+
+
+
+// int? getCardId(x) {
+//   // const x = '7♣';
+//   const array = [
+//     'A♣',
+//     '2♣',
+//     '3♣',
+//     '4♣',
+//     '5♣',
+//     '6♣',
+//     '7♣',
+//     '8♣',
+//     '9♣',
+//     '10♣',
+//     'J♣',
+//     'Q♣',
+//     'K♣',
+//     'A♦',
+//     '2♦',
+//     '3♦',
+//     '4♦',
+//     '5♦',
+//     '6♦',
+//     '7♦',
+//     '8♦',
+//     '9♦',
+//     '10♦',
+//     'J♦',
+//     'Q♦',
+//     'K♦',
+//     'A♥',
+//     '2♥',
+//     '3♥',
+//     '4♥',
+//     '5♥',
+//     '6♥',
+//     '7♥',
+//     '8♥',
+//     '9♥',
+//     '10♥',
+//     'J♥',
+//     'Q♥',
+//     'K♥',
+//     'A♠',
+//     '2♠',
+//     '3♠',
+//     '4♠',
+//     '5♠',
+//     '6♠',
+//     '7♠',
+//     '8♠',
+//     '9♠',
+//     '10♠',
+//     'J♠',
+//     'Q♠',
+//     'K♠',
+//   ];
+//   return array.indexOf(x);
+// }

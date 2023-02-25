@@ -22,6 +22,9 @@ void main(List<String> arguments) {
   final convertToUpperCase = core_dart_101.convertToUpperCase('');
   final extractEmails = core_dart_101.extractEmails('');
   final drawRectangle = core_dart_101.drawRectangle(6, 4);
+  final encodeToRot13 = core_dart_101.encodeToRot13('');
+  final isString = core_dart_101.isString('');
+  final getCardId = core_dart_101.getCardId('');
 
   if (concatenateStrings != null) {
     print(
@@ -99,5 +102,26 @@ void main(List<String> arguments) {
   } else {
     print('$colorFgRed $result $drawRectangle$tryMore');
   }
+
+  if (encodeToRot13 != null) {
+    print(
+        '$colorFgYellow $result encodeToRot13 task: «$encodeToRot13» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $encodeToRot13$tryMore');
+  }
+
+  if (isString != null) {
+    print(
+        '$colorFgYellow $result topperCase task: «$isString» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $isString$tryMore');
+  }
+
+  if (getCardId != null) {
+    print(
+        '$colorFgYellow $result topperCase task: «$getCardId» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result $getCardId$tryMore');
+  }
 }
-// «»  getRectangleString should return the string reprentation of rectangle with specified size
+// «»  isString
