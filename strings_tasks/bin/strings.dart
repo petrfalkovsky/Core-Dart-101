@@ -30,97 +30,101 @@ strings() {
     print(
         '$colorFgYellow $result concatenateStrings task: «$concatenateStrings» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $concatenateStrings$tryMore');
+    print('$colorFgRed $result concatenateStrings $concatenateStrings$tryMore');
   }
 
   if (getStringLength != null) {
     print(
         '$colorFgYellow $result getStringLength task: «$getStringLength» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $getStringLength$tryMore');
+    print('$colorFgRed $result getStringLength $getStringLength$tryMore');
   }
 
   if (getStringFromTemplate != null) {
     print(
         '$colorFgYellow $result getStringFromTemplate task: «$getStringFromTemplate» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $getStringFromTemplate$tryMore');
+    print(
+        '$colorFgRed $result getStringFromTemplate $getStringFromTemplate$tryMore');
   }
 
   if (extractNameFromTemplate != null) {
     print(
         '$colorFgYellow $result extractNameFromTemplate task: «$extractNameFromTemplate» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $extractNameFromTemplate$tryMore');
+    print(
+        '$colorFgRed $result extractNameFromTemplate $extractNameFromTemplate$tryMore');
   }
 
   if (getFirstChar != null) {
     print(
         '$colorFgYellow $result getFirstChar task: «$getFirstChar» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $getFirstChar$tryMore');
+    print('$colorFgRed $result getFirstChar $getFirstChar$tryMore');
   }
 
   if (removeLeadingAndTrailingWhitespaces != null) {
     print(
         '$colorFgYellow $result removeLeadingAndTrailingWhitespaces task: «$removeLeadingAndTrailingWhitespaces» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $removeLeadingAndTrailingWhitespaces$tryMore');
+    print(
+        '$colorFgRed $result removeLeadingAndTrailingWhitespaces $removeLeadingAndTrailingWhitespaces$tryMore');
   }
 
   if (removeFirstOccurrences != null) {
     print(
         '$colorFgYellow $result removeFirstOccurrences task: «$removeFirstOccurrences» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $removeFirstOccurrences$tryMore');
+    print(
+        '$colorFgRed $result removeFirstOccurrences $removeFirstOccurrences$tryMore');
   }
 
   if (unbracketTag != null) {
     print(
         '$colorFgYellow $result unbracketTag task: «$unbracketTag» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $unbracketTag$tryMore');
+    print('$colorFgRed $result unbracketTag $unbracketTag$tryMore');
   }
 
   if (convertToUpperCase != null) {
     print(
         '$colorFgYellow $result convertToUpperCase task: «$convertToUpperCase» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $convertToUpperCase$tryMore');
+    print('$colorFgRed $result convertToUpperCase $convertToUpperCase$tryMore');
   }
 
   if (extractEmails != null) {
     print(
         '$colorFgYellow $result extractEmails task: «$extractEmails» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $extractEmails$tryMore');
+    print('$colorFgRed $result extractEmails $extractEmails$tryMore');
   }
 
   if (drawRectangle != null) {
     print(
         '$colorFgYellow $result drawRectangle task: \n$drawRectangle $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $drawRectangle$tryMore');
+    print('$colorFgRed $result drawRectangle $drawRectangle$tryMore');
   }
 
   if (encodeToRot13 != null) {
     print(
         '$colorFgYellow $result encodeToRot13 task: «$encodeToRot13» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $encodeToRot13$tryMore');
+    print('$colorFgRed $result encodeToRot13 $encodeToRot13$tryMore');
   }
 
   if (isString != null) {
     print(
         '$colorFgYellow $result isString task: «$isString» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $isString$tryMore');
+    print('$colorFgRed $result isString $isString$tryMore');
   }
 
   if (getCardId != null) {
     print(
         '$colorFgYellow $result getCardId task: «$getCardId» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $getCardId$tryMore');
+    print('$colorFgRed $result getCardId $getCardId$tryMore');
   }
 }

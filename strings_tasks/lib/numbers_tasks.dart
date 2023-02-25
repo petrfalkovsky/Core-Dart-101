@@ -16,6 +16,8 @@
  *                                                                                           *
  ******************************************************************************************* */
 
+import 'dart:math';
+
 /// Returns an area of a rectangle given by width and height.
 ///
 /// @param {number} width
@@ -26,5 +28,37 @@
 ///   5, 10 => 50
 ///   5, 5  => 25
 int? getRectangleArea(width, height) {
+  // const String width = "20";
+  // const int height = 20;
   return width * height;
+}
+
+/// Returns a circumference of circle given by radius.
+///
+/// @param {number} radius
+/// @return {number}
+///
+/// @example:
+///   5    => 31.41592653589793
+///   3.14 => 19.729201864543903
+///   0    => 0
+double? getCircleCircumference(double radius) {
+  // const radius = 12;
+  return radius * 2 * pi;
+}
+
+/// Returns an average of two given numbers.
+///
+/// @param {number} value1
+/// @param {number} value2
+/// @return {number}
+///
+/// @example:
+///   5, 5  => 5
+///  10, 0  => 5
+///  -3, 3  => 0
+double? getAverage(double value1, double value2) {
+  // const value1 = 100;
+  // const value2 = 200;
+  return (value1 + value2) / 2;
 }
