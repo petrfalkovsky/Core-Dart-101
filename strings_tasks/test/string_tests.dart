@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 //todo проверить все сообщени об ошибках на соответствие по смыслу теста
 
-void main() {
+stringTests() {
   test(
       '\r\x1B[33m concatenateStrings should return concatenation of two strings\x1B[33m',
       () {
@@ -146,6 +146,3 @@ void main() {
     });
   });
 }
-
-
-//isString
