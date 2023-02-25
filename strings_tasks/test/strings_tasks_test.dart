@@ -90,7 +90,7 @@ void main() {
     );
   });
   test(
-      '\r\x1B[33m getRectangleString should return the string reprentation of rectangle with specified size \x1B[33m',
+      '\r\x1B[33m drawRectangle should return the string reprentation of rectangle with specified size \x1B[33m',
       () {
     expect(
       drawRectangle(6, 4),
@@ -105,4 +105,47 @@ void main() {
       '┌──────────┐\n│          │\n└──────────┘\n',
     );
   });
+
+  test(
+      '\r\x1B[33m encodeToRot13 should encode-decode string using ROT13 algorithm \x1B[33m',
+      () {
+    expect(encodeToRot13('hello'), 'uryyb');
+    expect(encodeToRot13('Why did the chicken cross the road?'),
+        'Jul qvq gur puvpxra pebff gur ebnq?');
+    expect(encodeToRot13('Gb trg gb gur bgure fvqr!'),
+        'To get to the other side!');
+    expect(
+        encodeToRot13('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'),
+        'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm');
+  });
+
+  test(
+      '\r\x1B[33m isString should return true if argument is a string \x1B[33m',
+      () {
+    // expect(isString(, false, 'undefined');
+    expect(isString('test'), true);
+    expect(isString(null), false);
+    expect(isString([]), false);
+    expect(isString(42), false);
+    expect(isString(true), false);
+    expect(isString({'key': 'value'}), false);
+    expect(isString(() => print('hello')), false);
+    expect(isString(String.fromCharCode(65)), true);
+    expect(isString(''), true);
+  });
+  group('getCardId', () {
+    test('should return the correct index for a given card', () {
+      expect(getCardId('7♣'), 6);
+      expect(getCardId('A♣'), 0);
+      expect(getCardId('10♥'), 35);
+    });
+
+    test('should return null if the card is not in the array', () {
+      expect(getCardId('foo'), null);
+      expect(getCardId(''), null);
+    });
+  });
 }
+
+
+//isString
