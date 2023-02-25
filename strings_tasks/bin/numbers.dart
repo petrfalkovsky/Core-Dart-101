@@ -10,11 +10,29 @@ numbers() {
   const tryMore = ', try add you code maybe';
 
   final getRectangleArea = core_dart_101.getRectangleArea(5, 10);
+  final calculateCircleCircumference = core_dart_101.getCircleCircumference(40);
+  final getAverage = core_dart_101.getAverage(40, 10);
 
   if (getRectangleArea != null) {
     print(
         '$colorFgYellow $result getRectangleArea task: «$getRectangleArea» $maybeRight $colorFgWhite dart test $colorFgYellow command');
   } else {
-    print('$colorFgRed $result $getRectangleArea$tryMore');
+    print('$colorFgRed $result getRectangleArea $getRectangleArea$tryMore');
   }
+
+  if (calculateCircleCircumference != null) {
+    print(
+        '$colorFgYellow $result calculateCircleCircumference task: «$calculateCircleCircumference» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print(
+        '$colorFgRed $result calculateCircleCircumference $calculateCircleCircumference$tryMore');
+  }
+
+  if (getAverage != null) {
+    print(
+        '$colorFgYellow $result getAverage task: «$getAverage» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result getAverage $getAverage$tryMore');
+  }
+  //getAverage
 }
