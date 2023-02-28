@@ -1,7 +1,7 @@
 /* *************************************************************************************************
  *                                                                                                 *
  * Please read the following tutorial before implementing tasks:                                   *
- * https://dart.dev/guides/libraries/library-tour#dartcore---numbers-collections-strings-and-moreg *
+ * https://dart.dev/guides/libraries/library-tour#dartcore---numbers-collections-strings-and-more  *
  *                                                                                                 *
  ***************************************************************************************************/
 
@@ -22,7 +22,8 @@
 
 // step 0.
 concatenateStrings(str1, str2) {
-  // your code here
+  // const str1 = 'пе';
+  // const str2 = 'тя';
   return '$str1$str2';
 }
 
