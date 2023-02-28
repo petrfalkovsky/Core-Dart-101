@@ -1,3 +1,5 @@
+// ignore_for_file: body_might_complete_normally_nullable, file_names
+
 /* *************************************************************************************************
  *                                                                                                 *
  * Please read the following tutorial before implementing tasks:                                   *
@@ -22,9 +24,7 @@
 
 // step 0.
 concatenateStrings(str1, str2) {
-  // const str1 = 'пе';
-  // const str2 = 'тя';
-  return '$str1$str2';
+  // your code here
 }
 
 // step 1.
@@ -58,10 +58,6 @@ concatenateStrings(str1, str2) {
 ///   ''      => 0
 getStringLength(str) {
   // your code here
-  // const str = 'Some text not so long.';
-  // const str = 'aaaaa';
-
-  return str.length;
 }
 
 /// Returns the result of string template and given parameters firstName and lastName.
@@ -75,9 +71,6 @@ getStringLength(str) {
 ///   'Chuck','Norris'  => 'Hello, Chuck Norris!'
 getStringFromTemplate(String firstName, String lastName) {
   // your code here
-  // const firstName = "Петя";
-  // const lastName = "Терентьев";
-  return 'Hello, $firstName $lastName!';
 }
 
 /// Extracts a name from template string 'Hello, First_Name Last_Name!'.
@@ -89,8 +82,7 @@ getStringFromTemplate(String firstName, String lastName) {
 ///   'Hello, John Doe!' => 'John Doe'
 ///   'Hello, Chuck Norris!' => 'Chuck Norris'
 String? extractNameFromTemplate(String value) {
-  final string = value.split('Hello, ')[1];
-  return string.substring(0, string.length - 1);
+  // your code here
 }
 
 /// Returns a first char of the given string.
@@ -102,10 +94,7 @@ String? extractNameFromTemplate(String value) {
 ///   'John Doe'  => 'J'
 ///   'cat'       => 'c'
 String? getFirstChar(String value) {
-  if (value.isNotEmpty) {
-    return value[0];
-  }
-  return null;
+  // your code here
 }
 
 /// Removes a leading and trailing whitespace characters from string.
@@ -118,8 +107,7 @@ String? getFirstChar(String value) {
 ///   'cat'              => 'cat'
 ///   '\tHello, World! ' => 'Hello, World!'
 String? removeLeadingAndTrailingWhitespaces(String value) {
-  // const value = '  Abracadabra';
-  return value.trim();
+  // your code here
 }
 
 /// Returns a string that repeated the specified number of times.
@@ -151,9 +139,7 @@ String? removeLeadingAndTrailingWhitespaces(String value) {
 ///   'I like legends', 'end' => 'I like legs',
 ///   'ABABAB','BA' => 'ABAB'
 String? removeFirstOccurrences(String str, String value) {
-  // const str = 'I like legends';
-  // const value = 'end';
-  return str.replaceFirst(value, '');
+  // your code here
 }
 
 /// Remove the first and last angle brackets from tag string
@@ -166,8 +152,7 @@ String? removeFirstOccurrences(String str, String value) {
 ///   '<span>' => 'span'
 ///   '<a>' => 'a'
 String? unbracketTag(String str) {
-  // const str = '<span>';
-  return str.replaceAll('<', '').replaceAll('>', '');
+  // your code here
 }
 
 /// Converts all characters of the specified string into the upper case
@@ -179,8 +164,7 @@ String? unbracketTag(String str) {
 ///   'Thunderstruck' => 'THUNDERSTRUCK'
 ///  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 String? convertToUpperCase(str) {
-  // const str = '15df4g5sfgv1z56sgf4ds8ha623469&^#@';
-  return str.toUpperCase();
+  // your code here
 }
 
 /// Extracts e-mails from single string with e-mails list delimeted by semicolons
@@ -197,9 +181,7 @@ String? convertToUpperCase(str) {
 ///   ],
 ///   'info@gmail.com' => ['info@gmail.com']
 List<String>? extractEmails(str) {
-  // const str =
-  //     'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com';
-  return str.split(';');
+  // your code here
 }
 
 /// Returns the string representation of rectangle with specified width and height
@@ -224,11 +206,7 @@ List<String>? extractEmails(str) {
 ///             '└──────────┘\n'
 ///
 String? drawRectangle(int width, int height) {
-  final horizontal = '─' * (width - 2);
-  final top = '┌$horizontal┐\n';
-  final middle = '│${' ' * (width - 2)}│\n' * (height - 2);
-  final bottom = '└$horizontal┘\n';
-  return top + middle + bottom;
+  // your code here
 }
 
 /// Encode specified string with ROT13 cipher
@@ -244,38 +222,8 @@ String? drawRectangle(int width, int height) {
 ///   'Gb trg gb gur bgure fvqr!' => 'To get to the other side!'
 ///   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 ///    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
-// All tests passed!
-// String? encodeToRot13(String input) {
-//   StringBuffer output = StringBuffer();
-//   for (int i = 0; i < input.length; i++) {
-//     int charCode = input.codeUnitAt(i);
-//     if (charCode >= 65 && charCode <= 90) {
-//       // uppercase letters
-//       charCode = ((charCode - 65 + 13) % 26) + 65;
-//     } else if (charCode >= 97 && charCode <= 122) {
-//       // lowercase letters
-//       charCode = ((charCode - 97 + 13) % 26) + 97;
-//     }
-//     output.writeCharCode(charCode);
-//   }
-//   return output.toString();
-// }
-// All tests passed!
 String? encodeToRot13(String input) {
-  // const input = 'hello';
-  List<int> inputRunes = input.runes.toList();
-  List<int> outputRunes = inputRunes.map((int charCode) {
-    if (charCode >= 65 && charCode <= 90) {
-      // uppercase letters
-      return ((charCode - 65 + 13) % 26) + 65;
-    } else if (charCode >= 97 && charCode <= 122) {
-      // lowercase letters
-      return ((charCode - 97 + 13) % 26) + 97;
-    } else {
-      return charCode;
-    }
-  }).toList();
-  return String.fromCharCodes(outputRunes);
+  // your code here
 }
 
 /// Returns true if the value is string; otherwise false.
@@ -290,7 +238,7 @@ String? encodeToRot13(String input) {
 ///   isString('test') => true
 ///   isString(new String('test')) => true
 bool? isString(dynamic value) {
-  return value is String;
+  // your code here
 }
 
 /// Returns playid card id.
@@ -315,64 +263,6 @@ bool? isString(dynamic value) {
 ///     ...
 ///   'Q♠' => 50
 ///   'K♠' => 51
-
 int? getCardId(String x) {
-  // const x = 'K♠';
-  const cards = [
-    'A♣',
-    '2♣',
-    '3♣',
-    '4♣',
-    '5♣',
-    '6♣',
-    '7♣',
-    '8♣',
-    '9♣',
-    '10♣',
-    'J♣',
-    'Q♣',
-    'K♣',
-    'A♦',
-    '2♦',
-    '3♦',
-    '4♦',
-    '5♦',
-    '6♦',
-    '7♦',
-    '8♦',
-    '9♦',
-    '10♦',
-    'J♦',
-    'Q♦',
-    'K♦',
-    'A♥',
-    '2♥',
-    '3♥',
-    '4♥',
-    '5♥',
-    '6♥',
-    '7♥',
-    '8♥',
-    '9♥',
-    '10♥',
-    'J♥',
-    'Q♥',
-    'K♥',
-    'A♠',
-    '2♠',
-    '3♠',
-    '4♠',
-    '5♠',
-    '6♠',
-    '7♠',
-    '8♠',
-    '9♠',
-    '10♠',
-    'J♠',
-    'Q♠',
-    'K♠',
-  ];
-
-  final cardIndex = cards.indexOf(x);
-  return cardIndex != -1 ? cardIndex : null;
+  // your code here
 }

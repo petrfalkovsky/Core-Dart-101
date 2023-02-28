@@ -1,4 +1,4 @@
-import 'package:core_dart_101/numbers_tasks.dart';
+import 'package:core_dart_101/2_numbers_tasks.dart';
 import 'package:test/test.dart';
 
 //todo проверить все сообщени об ошибках на соответствие по смыслу теста

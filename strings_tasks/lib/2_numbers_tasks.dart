@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, body_might_complete_normally_nullable, file_names
+
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following docs:                                                           *
@@ -28,9 +30,7 @@ import 'dart:math';
 ///   5, 10 => 50
 ///   5, 5  => 25
 int? getRectangleArea(width, height) {
-  // const String width = "20";
-  // const int height = 20;
-  return width * height;
+  // your code here
 }
 
 /// Returns a circumference of circle given by radius.
@@ -43,8 +43,7 @@ int? getRectangleArea(width, height) {
 ///   3.14 => 19.729201864543903
 ///   0    => 0
 double? getCircleCircumference(double radius) {
-  // const radius = 12;
-  return radius * 2 * pi;
+  // your code here
 }
 
 /// Returns an average of two given numbers.
@@ -58,7 +57,5 @@ double? getCircleCircumference(double radius) {
 ///  10, 0  => 5
 ///  -3, 3  => 0
 double? getAverage(double value1, double value2) {
-  // const value1 = 100;
-  // const value2 = 200;
-  return (value1 + value2) / 2;
+  // your code here
 }

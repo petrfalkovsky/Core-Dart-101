@@ -1,4 +1,4 @@
-import 'package:core_dart_101/strings_tasks.dart' as core_dart_101;
+import 'package:core_dart_101/1_strings_tasks.dart' as core_dart_101;
 
 strings() {
   const colorFgYellow = "\x1b[33m";
