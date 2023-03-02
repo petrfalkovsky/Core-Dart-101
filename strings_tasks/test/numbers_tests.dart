@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:core_dart_101/numbers_tasks.dart';
 import 'package:test/test.dart';
 
@@ -39,6 +41,58 @@ numbersTests() {
           equals(double.maxFinite / 4));
     });
 
-    //getAverage
+    test(
+        '$colorFgYellow func getDistanceBetweenPoints should return a distance between points, check it, pls',
+        () {
+      expect(getDistanceBetweenPoints(0, 0, 0, 1), 1);
+      expect(getDistanceBetweenPoints(0, 0, 1, 0), 1);
+      expect(getDistanceBetweenPoints(0, 0, 1, 0), 1);
+    });
+
+    test(
+        '$colorFgYellow func getLinearEquationRoot should return a root of linear equation, check it, pls',
+        () {
+      expect(getLinearEquationRoot(5, -10), 2);
+      expect(getLinearEquationRoot(1, 8), -8);
+      expect(getLinearEquationRoot(5, 0), 0);
+    });
+
+    test(
+        '$colorFgYellow func getAngleBetweenVectors should return a angle (in radians) between two linear vectors, check it, pls',
+        () {
+      expect(getAngleBetweenVectors(1, 0, 0, 1), equals(pi / 2));
+      expect(getAngleBetweenVectors(0, 1, 0, -1), equals(pi));
+      expect(getAngleBetweenVectors(0, -1, 1, 0), equals(pi / 2));
+      expect(getAngleBetweenVectors(0, 1, 0, 1), equals(0));
+    });
+
+    test(
+        '$colorFgYellow func getLastDigitInDouble should return a last digit of the double, check it, pls',
+        () {
+      expect(getLastDigitInDouble(100), 0.0);
+      expect(getLastDigitInDouble(0), 0.0);
+      expect(getLastDigitInDouble(4), 4.0);
+      expect(getLastDigitInDouble(5484987987.2), 2.0);
+    });
+
+    test(
+        '$colorFgYellow func getLastDigitInInt should return a last digit of the double, check it, pls',
+        () {
+      expect(getLastDigitInInt(100), 0);
+      expect(getLastDigitInInt(0), 0);
+      expect(getLastDigitInInt(4), 4);
+      expect(getLastDigitInInt(5484987987), 7);
+    });
+
+    test(
+        '$colorFgYellow func getLastDigitInString should return a last digit of the double, check it, pls',
+        () {
+      expect(getLastDigitInString(100), '0');
+      expect(getLastDigitInString(0), '0');
+      expect(getLastDigitInString(4), '4');
+      expect(getLastDigitInString(5484987987), '7');
+    });
+
+    //getLastDigitInString
   });
 }
