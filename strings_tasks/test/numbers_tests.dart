@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:core_dart_101/numbers_tasks.dart';
 import 'package:test/test.dart';
 
-//todo проверить все сообщени об ошибках на соответствие по смыслу теста
+//todo проверить все сообщения об ошибках на соответствие по смыслу теста
 const colorFgYellow = "\x1b[33m";
 const colorFgRed = "\x1b[31m";
 const colorFgWhite = '\x1b[37m';
@@ -93,6 +93,62 @@ numbersTests() {
       expect(getLastDigitInString(5484987987), '7');
     });
 
-    //getLastDigitInString
+    test(
+        '$colorFgYellow func parseNumberFromString should return a number from the given string representation, check it, pls',
+        () {
+      expect(parseNumberFromString('100'), 100);
+      expect(parseNumberFromString('0'), 0);
+      expect(parseNumberFromString('4'), 4);
+      expect(parseNumberFromString(''), null);
+    });
+
+    test(
+        '$colorFgYellow func getParallelepipedDiagonal should return a diagonal length of the rectangular parallepiped, check it, pls',
+        () {
+      expect(getParallelepipedDiagonal(1, 1, 1), 1.7320508075688772);
+      expect(getParallelepipedDiagonal(3, 3, 3), 5.196152422706632);
+      expect(getParallelepipedDiagonal(1, 2, 3), 3.7416573867739413);
+      expect(getParallelepipedDiagonal(0, 0, 0), 0.0);
+    });
+
+    test(
+        '$colorFgYellow func roundToPowerOfTen should return an number rounded to specified power of 10, check it, pls',
+        () {
+      expect(roundToPowerOfTen(1234, 1), 1230);
+      expect(roundToPowerOfTen(1234, 2), 1200);
+      expect(roundToPowerOfTen(1234, 3), 1000);
+      expect(roundToPowerOfTen(1678, 0), 1678);
+      expect(roundToPowerOfTen(1678, 1), 1680);
+      expect(roundToPowerOfTen(1678, 2), 1700);
+      expect(roundToPowerOfTen(1678, 3), 2000);
+    });
+
+    test(
+        '$colorFgYellow func roundToPowerOfTen should return an number rounded to specified power of 10, check it, pls',
+        () {
+      expect(isPrime(2), true);
+      expect(isPrime(3), true);
+      expect(isPrime(4), false);
+      expect(isPrime(5), true);
+      expect(isPrime(6), false);
+      expect(isPrime(7), true);
+      expect(isPrime(8), false);
+      expect(isPrime(9), false);
+      expect(isPrime(10), false);
+      expect(isPrime(11), true);
+      expect(isPrime(12), false);
+      expect(isPrime(13), true);
+      expect(isPrime(113), true);
+      expect(isPrime(119), false);
+    });
+
+    test(
+        '$colorFgYellow func toNumber should convert any value to number or return the default, check it, pls',
+        () {
+      expect(toNumber(null, 0), 0);
+      expect(toNumber('test', 0), 0);
+      expect(toNumber('1', 0), 1);
+      expect(toNumber(42, 0), 42);
+    });
   });
 }

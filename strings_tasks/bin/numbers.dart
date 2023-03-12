@@ -20,6 +20,13 @@ numbers() {
   final getLastDigitInDouble = core_dart_101.getLastDigitInDouble(154889);
   final getLastDigitInInt = core_dart_101.getLastDigitInInt(65489798);
   final getLastDigitInString = core_dart_101.getLastDigitInString(5465465);
+  final parseNumberFromString = core_dart_101.parseNumberFromString('11456749');
+  final getParallelepipedDiagonal =
+      core_dart_101.getParallelepipedDiagonal(0, 0, 0);
+  final roundToPowerOfTen = core_dart_101.roundToPowerOfTen(1678, 2);
+  final isPrime = core_dart_101.isPrime(99);
+  final toNumber = core_dart_101.toNumber(null, 0);
+  // toNumber
 
   if (getRectangleArea != null) {
     print(
@@ -90,5 +97,42 @@ numbers() {
         '$colorFgRed $result getLastDigitInString $getLastDigitInString$tryMore');
   }
 
-  // getLastDigitInString
+  if (parseNumberFromString != null) {
+    print(
+        '$colorFgYellow $result parseNumberFromString task: «$parseNumberFromString» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print(
+        '$colorFgRed $result parseNumberFromString $parseNumberFromString$tryMore');
+  }
+
+  if (getParallelepipedDiagonal != null) {
+    print(
+        '$colorFgYellow $result getParallelepipedDiagonal task: «$getParallelepipedDiagonal» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print(
+        '$colorFgRed $result getParallelepipedDiagonal $getParallelepipedDiagonal$tryMore');
+  }
+
+  if (roundToPowerOfTen != null) {
+    print(
+        '$colorFgYellow $result roundToPowerOfTen task: «$roundToPowerOfTen» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result roundToPowerOfTen $roundToPowerOfTen$tryMore');
+  }
+
+  if (isPrime != null) {
+    print(
+        '$colorFgYellow $result isPrime task: «$isPrime» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result isPrime $isPrime$tryMore');
+  }
+
+  if (toNumber != null) {
+    print(
+        '$colorFgYellow $result toNumber task: «$toNumber» $maybeRight $colorFgWhite dart test $colorFgYellow command');
+  } else {
+    print('$colorFgRed $result toNumber $toNumber$tryMore');
+  }
+
+  // toNumber
 }
